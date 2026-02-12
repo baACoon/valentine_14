@@ -1,0 +1,157 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffb6d9 50%, #ff8fab 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        .container {
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #ff1493;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(255, 20, 147, 0.2);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .button-container {
+            margin-top: 3rem;
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.6);
+            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+        }
+
+        .button:active {
+            transform: translateY(-1px);
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #c2175f;
+            margin: 2rem 0;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .heart {
+            font-size: 3rem;
+            animation: heartBeat 1.3s infinite;
+            display: inline-block;
+            margin: 0 0.5rem;
+        }
+
+        .heart:nth-child(1) { animation-delay: 0s; }
+        .heart:nth-child(2) { animation-delay: 0.2s; }
+        .heart:nth-child(3) { animation-delay: 0.4s; }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #d946a9;
+            margin-top: 2rem;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating hearts background */
+        .floating-heart {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.6;
+            animation: float 6s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .heart-1 { left: 10%; animation-delay: 0s; }
+        .heart-2 { left: 20%; animation-delay: 1s; }
+        .heart-3 { left: 30%; animation-delay: 2s; }
+        .heart-4 { left: 40%; animation-delay: 3s; }
+        .heart-5 { left: 50%; animation-delay: 0.5s; }
+        .heart-6 { left: 60%; animation-delay: 1.5s; }
+        .heart-7 { left: 70%; animation-delay: 2.5s; }
+        .heart-8 { left: 80%; animation-delay: 3.5s; }
+        .heart-9 { left: 90%; animation-delay: 1.2s; }
