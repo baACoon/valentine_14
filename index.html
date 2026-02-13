@@ -7,6 +7,18 @@
     <title>Happy Valentine's Day 💕</title>
 </head>
 <body>
+    <!-- Flower popup overlay -->
+        <div id="flower-popup" class="flower-popup">
+            <div class="bouquet">
+            
+                <div class="emoji-sunflower-container">
+                    <div class="emoji-sunflower">🌻</div>
+                    <div class="emoji-pot"></div>
+                </div>
+                <div class="ribbon ribbon-stem"></div>
+            </div>
+            <div class="flowers-message"> sunflower for you!</div>
+        </div>
     <!-- Floating hearts background -->
     <div class="floating-heart heart-1">💕</div>
     <div class="floating-heart heart-2">💗</div>
@@ -33,6 +45,18 @@
     <div class="button-container">
         <a href="insidebtn.html" class="button">Click me</a>
     </div>
+
+    <script>
+    
+    window.addEventListener('DOMContentLoaded', function() {
+        const popup = document.getElementById('flower-popup');
+        popup.style.display = 'flex';
+        setTimeout(() => {
+            popup.style.opacity = '0';
+            setTimeout(() => { popup.style.display = 'none'; }, 1000);
+        }, 5000); // Show for 7 seconds
+    });
+    </script>
 
 </body>
 </html>
